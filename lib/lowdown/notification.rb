@@ -92,7 +92,7 @@ module Lowdown
     #         the payload organized according to the APN specification.
     #
     def formatted_payload
-      if @payload.key?("aps")
+      if @payload.key?("aps") || @payload.key?("mdm")
         @payload
       else
         payload = {}
